@@ -1,0 +1,16 @@
+{
+  "name": "catsco",
+  "version": "1.0.0",
+  "description": "Dedicated to all things feline - from quirky cat characters to tail-twitching training techniques.",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server --browsers=firefox",
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+
+  },
+  "author": "Maz",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

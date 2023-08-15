@@ -1,0 +1,43 @@
+//COLORS:
+
+// Primary Colors
+$color-primary: hsl(23, 53%, 92%);
+$color-primary-dark: darken($color-primary, 10%);
+
+// Secondary Color
+$color-secondary: hsl(0, 100%, 71%);
+
+// Text Colors
+$text-primary: hsl(0, 0%, 20%);
+$text-secondary: hsl(213, 14%, 49%); // Used also for highlights
+$text-placeholder: hsl(200, 15%, 73%);
+
+// Accent Colors
+$accent-color-light: hsl(210, 29%, 24%);
+$accent-color-dark: darken($accent-color-light, 10%);
+
+// Background
+$background-color: hsl(44, 72%, 93%);
+
+// Fonts
+$font-primary: "Lato", sans-serif;
+$font-display: "Dancing Script", cursive;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-primary;
+  font-weight: 400;
+  line-height: 1.7;
+}
