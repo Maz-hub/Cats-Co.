@@ -1,0 +1,28 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 700;
+}
+
+.heading-1 {
+  @extend %heading;
+}
+
+.heading-2 {
+  @extend %heading;
+}
+
+.heading-3 {
+  @extend %heading;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1rem;
+
+  &--light {
+    color: $color-primary;
+  }
+  &--dark {
+    color: $text-primary;
+  }
+}
