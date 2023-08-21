@@ -6,6 +6,7 @@ $color-primary-dark: darken($color-primary, 10%);
 
 // Secondary Color
 $color-secondary: hsl(0, 100%, 71%);
+$color-secondary-dark: darken($color-secondary, 5%);;
 
 // Text Colors
 $text-primary: hsl(0, 0%, 20%);
@@ -47,4 +48,6 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 8.875rem)[col-end]) [center-end] minmax(3rem, 1fr) [full-end] ;
+
+  
 }

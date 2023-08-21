@@ -20,10 +20,12 @@ body {
   grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 8.875rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
 
 .cats {
-  background-color: #ff6b6b; }
+  background-color: #ff6b6b;
+  grid-column: center-start/ center-end; }
 
 .favorites {
-  background-color: #2b3d4f; }
+  background-color: #ff6b6b;
+  grid-column: col-start 7 / full-end; }
 
 .features-container {
   grid-column: center-start / center-end;
@@ -46,13 +48,16 @@ body {
     font-size: 1.2rem; }
 
 .footer {
-  background-color: #ff6b6b; }
+  background-color: #ff6b6b;
+  grid-column: full-start / full-end; }
 
 .gallery {
-  background-color: #2b3d4f; }
+  background-color: #2b3d4f;
+  grid-column: full-start / full-end; }
 
 .header {
-  background-color: #e9cbb9; }
+  background-color: #e9cbb9;
+  grid-column: full-start / col-end 6; }
 
 .sidebar {
   background-color: #faf3e0;
@@ -60,14 +65,49 @@ body {
   grid-row: 1 / -1; }
 
 .story__pictures {
-  background-color: #f5e8e0; }
+  grid-column: full-start / col-end 4;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center; }
+
+.story__img--1 {
+  width: 100%;
+  grid-row: 1 / span 4;
+  grid-column: 1 / span 4;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1%; }
+
+.story__img--2 {
+  width: 115%;
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+  z-index: 10;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 1%; }
 
 .story__content {
-  background-color: #faf3e0; }
+  grid-column: col-start 5 / full-end;
+  padding: 6vw 8vw;
+  display: grid;
+  align-items: center;
+  justify-items: start; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Merriweather", serif;
   font-weight: 700; }
+
+.heading-2 {
+  font-size: 2rem; }
+  .heading-2--light {
+    color: #f5e8e0; }
+  .heading-2--dark {
+    color: #333333; }
+
+.heading-3 {
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  text-transform: uppercase; }
 
 .heading-4 {
   font-size: 1rem; }
@@ -75,3 +115,29 @@ body {
     color: #f5e8e0; }
   .heading-4--dark {
     color: #333333; }
+
+.btn {
+  background-color: #ff6b6b;
+  color: #f5e8e0;
+  border: none;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn:hover {
+    background-color: #ff5252; }
+
+.mb-small {
+  margin-bottom: 1rem; }
+
+.mb-medium {
+  margin-bottom: 2rem; }
+
+.mb-large {
+  margin-bottom: 3rem; }
+
+.mb-huge {
+  margin-bottom: 4rem; }
