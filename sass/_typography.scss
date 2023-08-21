@@ -29,7 +29,7 @@
 
 .heading-4 {
   @extend %heading;
-  font-size: 1rem;
+  font-size: 1.1rem;
 
   &--light {
     color: $color-primary;
@@ -43,7 +43,7 @@
   background-color: $color-secondary;
   color: $color-primary;
   border: none;
-  border-radius: 0;
+  border-radius: 1%;
   font-family: $font-primary;
   font-size: 1.1rem;
   text-transform: uppercase;
