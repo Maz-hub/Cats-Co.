@@ -1,7 +1,9 @@
 //COLORS:
 
 // Primary Colors
-$color-primary: hsl(23, 53%, 92%);
+$color-primary: rgb(245, 232, 224);
+$color-primary-dark-1: darken($color-primary, 70%);
+$color-primary-dark-2: darken($color-primary, 55%);
 $color-primary-dark: darken($color-primary, 77%);
 
 // Secondary Color
