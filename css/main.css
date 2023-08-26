@@ -61,8 +61,28 @@ body {
     grid-column: 1 / -1; }
 
 .favorites {
-  background-color: #ff6b6b;
-  grid-column: col-start 7 / full-end; }
+  background-color: #3a2113;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-row-gap: 2rem;
+  justify-items: center; }
+  .favorites__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center; }
+  .favorites__img {
+    width: 5rem;
+    border-radius: 50%;
+    display: block; }
+  .favorites__text {
+    color: #b0bec4;
+    text-transform: uppercase;
+    font-size: .8rem; }
 
 .features-container {
   grid-column: center-start / center-end;
@@ -283,7 +303,7 @@ body {
   text-transform: uppercase; }
 
 .heading-4 {
-  font-size: 1.1rem; }
+  font-size: 1rem; }
   .heading-4--light {
     color: #f5e8e0; }
   .heading-4--dark {
