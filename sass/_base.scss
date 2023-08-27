@@ -8,7 +8,7 @@ $color-primary-dark: darken($color-primary, 77%);
 
 // Secondary Color
 $color-secondary: #ff6b6b;
-$color-secondary-dark: darken($color-secondary, 5%);;
+$color-secondary-dark: darken($color-secondary, 5%);
 
 // Text Colors
 $text-primary: hsl(0, 0%, 20%);
@@ -23,8 +23,14 @@ $accent-color-dark: darken($accent-color-light, 10%);
 $background-color: #fcf9f3;
 
 // Fonts
-$font-primary: 'Lato', sans-serif;
-$font-display: 'Merriweather', serif;
+$font-primary: "Lato", sans-serif;
+$font-display: "Merriweather", serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
 
 *,
 *::before,
@@ -36,6 +42,10 @@ $font-display: 'Merriweather', serif;
 
 html {
   box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 80%;
+  }
 }
 
 body {
@@ -49,7 +59,27 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
-  grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 8.875rem)[col-end]) [center-end] minmax(3rem, 1fr) [full-end] ;
+  grid-template-columns:
+    [sidebar-start] 6rem [sidebar-end full-start] minmax(3rem, 1fr)
+    [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 8.875rem) [col-end]
+    )
+    [center-end] minmax(3rem, 1fr) [full-end];
 
-  
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 4rem 80vh min-content 40vw repeat(3, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(3rem, 1fr)
+      [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 8.875rem) [col-end]
+      )
+      [center-end] minmax(3rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 4rem calc(100vh - 4rem);
+  }
 }

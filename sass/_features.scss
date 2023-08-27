@@ -8,20 +8,26 @@
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   grid-gap: 3rem;
   align-items: start;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem auto;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem auto;
+  }
 }
 
 .feature {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-gap: 1rem;
-    
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 1rem;
 
   &__icon {
     width: 3rem;
     height: 3rem;
     grid-row: 1 / span 2;
-    transform: translateY(-.6rem);
-    
+    transform: translateY(-0.6rem);
   }
 
   &__text {

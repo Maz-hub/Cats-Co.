@@ -8,14 +8,22 @@
     url(../img/CatCo_Hero.jpg);
   background-size: cover;
   background-position: center;
-  padding: 6rem;
+  padding: 2rem;
   padding-top: 2rem;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 1.5rem;
+  }
 
   &__CatCo_logo {
     height: 3rem;
@@ -38,21 +46,29 @@
 
     &::before,
     &::after {
-        content: "";
-        height: 1px;
-        display: block;
-        background-color: currentColor;
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor;
     }
   }
 
   &__services-logo {
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
     justify-items: center;
+    align-items: center;
     img {
-      height: 3.5rem;
+      max-height: 3rem;
+      max-width: 100%;
       filter: brightness(90%);
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(110%);
+      }
     }
   }
 }
